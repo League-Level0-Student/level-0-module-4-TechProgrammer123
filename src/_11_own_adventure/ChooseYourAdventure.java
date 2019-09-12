@@ -24,12 +24,31 @@ public static void main(String[] args) {
 		
 	}
 	if (option1 == 0) {
-		JOptionPane.showOptionDialog(null, "Which Object", "Choose an option", 0, JOptionPane.INFORMATION_MESSAGE, null,
+		int option2 = JOptionPane.showOptionDialog(null, "Which Object", "Choose an option", 0, JOptionPane.INFORMATION_MESSAGE, null,
 				new String[] { "Fold up table", "Fire extinguisher for making softer landing for objects above you", "A steel desk" }, null);
 		
 		
-		
+		if (option2 == 0) {
+			JOptionPane.showMessageDialog(null, "You have died because the fold up table could not hold up the debri that was falling down.");
+		}
+		if (option2 == 1) {
+			JOptionPane.showMessageDialog(null, "no.");
+		}
+		if (option2 == 2) {
+			int yesNo = JOptionPane.showOptionDialog(null, "You have survived. Would you like to exit building", "Choose an option", 0, JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "Yes", "No"}, null);
+			if (yesNo == 0) {
+				JOptionPane.showMessageDialog(null, "You have safely exited the building");
+			}
+			if (yesNo == 1) {
+				JOptionPane.showMessageDialog(null, "no.");
+			}
+			
+		}
 	}
+	
+
+
 	
 }
 }
